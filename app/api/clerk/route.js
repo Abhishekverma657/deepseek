@@ -2,7 +2,7 @@ import { Webhook } from "svix";
 import dbConnect from "@/config/db";
 import User from "@/models/User";
 import { headers } from "next/headers";
-import { jsxDEV } from './../../../node_modules/@types/react/ts5.0/v18/jsx-dev-runtime.d';
+ 
 import { NextResponse } from "next/server";
  export  async function POST(req) {
     const wh=new Webhook(process.env.SIGNING_SECRET);
