@@ -10,9 +10,11 @@
   },
   "dependencies": {
     "@clerk/nextjs": "^6.12.6",
+    "@types/react": "^19.0.12",
+    "@types/react-dom": "^19.0.4",
     "axios": "^1.8.4",
     "mongoose": "^8.12.1",
-    "next": "15.2.3",
+    "next": "^15.2.3",
     "openai": "^4.89.0",
     "prismjs": "^1.30.0",
     "react": "^19.0.0",
@@ -23,6 +25,7 @@
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",
-    "tailwindcss": "^4"
+    "tailwindcss": "^4",
+    "typescript": "^5.8.2"
   }
 }
