@@ -80,12 +80,14 @@ export async function POST(req) {
     switch (type) {
       case "user.created":
         await User.create(userData);
+        console.log("created ")
         break;
       case "user.updated":
         await User.findByIdAndUpdate(data.id, userData);
         break;
       case "user.deleted":
         await User.findByIdAndDelete(data.id);
+        console.log('deleted')
         break;
       default:
         console.log("Unhandled event type:", type);
