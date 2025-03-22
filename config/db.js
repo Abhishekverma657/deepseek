@@ -32,8 +32,8 @@ import mongoose from "mongoose";
 //     if (!cached.promise) {
 //         console.log("Creating new database connection...");
 //         cached.promise = mongoose.connect(process.env.MONGODB_URI, {
-//             useNewUrlParser: true,
-//             useUnifiedTopology: true
+            // useNewUrlParser: true,
+            // useUnifiedTopology: true
 //         }).then((mongoose) => {
 //             console.log("Database connected successfully!");
 //             return mongoose;

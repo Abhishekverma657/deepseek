@@ -22,7 +22,7 @@ import { NextResponse } from "next/server";
         const userData={
             _id:data.id,
             name:`${data.first_name} ${data.last_name}`,
-            email:data.email_addresses[0].email_address,
+            email:data.email_addresses[0]?.email_address||"email",
             image:data.image_url
         };
          await dbConnect();
