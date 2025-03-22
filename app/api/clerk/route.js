@@ -49,7 +49,7 @@ import { Webhook } from "svix";
 import dbConnect from "@/config/db";
 import User from "@/models/User";
 import { headers } from "next/headers";
-import { NextResponse } from "next/server";
+import { NextRequest } from "next/server";
 
 export async function POST(req) {
   const wh = new Webhook(process.env.SIGNING_SECRET);
@@ -93,9 +93,9 @@ export async function POST(req) {
         console.log("Unhandled event type:", type);
     }
 
-    return NextResponse.json({ message: "Event received" });
+    return NextRequest.json({ message: "Event received" });
   } catch (error) {
     console.error("Webhook verification failed:", error);
-    return NextResponse.json({ error: "Webhook verification failed" }, { status: 400 });
+    return NextRequest.json({ error: "Webhook verification failed" }, { status: 400 });
   }
 }
